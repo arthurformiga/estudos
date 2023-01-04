@@ -1,0 +1,127 @@
+*{ margin: 0;
+    text-decoration: none;
+}
+body{
+    background: rgba(0, 0, 0, 0.925);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+}
+#titulo{
+   flex-direction: column;
+   line-height: 10px;
+   color:#ffd9008a;
+}
+#lista{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    text-decoration: none;
+    
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+#socio{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.7em;
+    font-weight: 10px;
+    line-height: 5px;
+    color:#ffd9008a ;
+    margin-bottom: 45px;
+
+}
+li{
+display: inline-block;
+margin: 9px;
+}
+h1{
+    font-weight: 200;
+    line-height: 20px;
+}
+main{
+    margin-top: 50px;
+}
+#texto{
+    color:#ffd9008a;
+}
+a{
+    color:#ffd9008a;
+}
+/*a :hover{
+    color: #ff25258a;
+    transition: 0.5s;
+    border:#ffd9008a 1px solid;
+}*/
+
+
+ .cabecalho:hover{
+    color: #ff25258a;
+    border:#ffd9008a 1px solid;
+    /*border-radius: 12px;*/
+    transition: 0.9s;
+}
+#texto{
+    line-height: 20px;
+}
+#email{
+    width: 250px;
+    height: 25px;
+    border-radius: 20px;
+    box-shadow: 3px 3px 3px black;
+    
+
+}
+#senha{
+    width: 250px;
+    height: 25px;
+    border-radius: 20px;
+    margin-bottom: 5px;
+    box-shadow: 3px 3px 3px black;
+    
+}
+#botao{
+    width: 90px;
+    height: 25px;
+    border-radius: 20px;
+    margin-bottom: 5px;
+    box-shadow: 3px 3px 3px black;
+    font-weight: bold;
+   
+}
+#botao{
+     cursor: pointer;
+     color:#ffd9008a;
+     background:rgba(0, 0, 0, 0.226);
+}
+
+
+form{
+    display: flex;
+    flex-direction:column;
+    font-weight: bold;
+    
+}
+input{
+    background:whitesmoke;
+    
+}
+
+
+
+#foto{
+    display: flex;
+    justify-content: center;
+    
+}
+footer{
+    text-align: center;
+    color: #ffd9008a;
+    text-transform: uppercase;
+    font-style: italic;
+    font-size: 0.9em;
+    margin-top: 25px;
+}

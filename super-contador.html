@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Contador</title>
+    <style type="text/css">
+      body{
+        background:rgb(92, 92, 240);
+      }
+      div{
+        background: rgb(255, 255, 255);
+        padding: 50px;
+        height: 154px;
+        width: 50%;
+        border-radius: 10px;
+        height: auto;
+        width: auto;
+      }
+      section{
+        display: flex;
+        justify-content: center;
+      }
+      header{
+        text-align: center;
+        color: aliceblue;
+        font-style: oblique;
+      }
+      footer{
+        text-align: center;
+        color: aliceblue;
+        font-style: italic;
+      }
+
+    </style>
+    <script>
+   function contar(){
+    let inicio=document.getElementById('inicio')
+    let fim=document.getElementById('fim')
+    let passo=document.getElementById('passo')
+    let res=document.getElementById('res')
+    if(inicio.value.length==0 || fim.value.length==0 || passo.value.length==0){
+      res.innerHTML='Impossível, faltam dados!'
+    }else{
+      res.innerHTML='contando:'
+      let i= Number(inicio.value)
+      let f=Number(fim.value)
+      let p=Number(passo.value)
+      if(p<=0){ 
+       alert=('PASSO INVÁLIDO!! CONSIDERANDO PASSO 1') 
+       p=1
+      } 
+      if(i<f){
+      for(let c=i; c<=f; c+=p){
+      res.innerHTML+=`${c}\u{1F449}`
+       
+      }
+    }else{
+        for(c=1;c>=f; c-=p){
+          res.innerHTML=`${c}\u{1F449}`
+        }
+      }res.innerHTML+='\u{1F3C1}'
+      
+      }
+    }
+    
+    
+   
+   
+    </script>
+</head>
+<body>
+    <header>
+      <h1>
+        <p>
+          Vamos Contar!
+        </p>
+      </h1>
+
+    </header>
+
+    <section>
+
+      <div>
+        <form>
+         <p> Início: <input type="number" name="Início" id="inicio"> <br> </p>
+         <p> Fim: <input type="number" name="Fim" id="fim"><br> </p>
+         <p> Passo: <input type="number" name="Passo" id="passo"> <br> </p>
+          <input type="button" value="Contar" onclick="contar()">
+           <p id="res">Preparando a contagem...</p>
+        </form>
+      </div>
+
+    </section>
+
+    <footer>
+      &copy;CursoemVideo
+    </footer>
+</body>
+</html>

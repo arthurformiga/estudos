@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Feliz!!!!!</title>
+    <!------------------------------Área de CSS------------------------------------------------------------------->
+    <style text=css> 
+
+
+        header{
+            
+            color: aliceblue;
+            text-align: center;
+            margin: 0;
+            font-weight: 400;
+            font-style: oblique;
+            
+        }
+
+
+        body{
+       background: rgb(146, 128, 250);
+       font:normal 15px arial;
+       width: auto;
+       height: auto;
+        }
+        
+        footer{
+            
+            margin-bottom: 10px;
+            text-align: center;
+            font-style: italic;
+            color: aliceblue;
+        }
+
+       
+        #container{
+           border-radius: 999px;
+           box-shadow: 5px 5px 10px;
+           text-align: center;
+           
+            
+           
+
+        }   
+       #caixa{
+        display: flex;
+        justify-content: center;
+        padding-bottom: 15px;
+        
+       
+       }
+       h3{
+        font-style: oblique;
+       }
+       #nome{
+        margin-bottom: 10px;
+       }
+        
+      
+        
+
+        
+
+        
+      
+
+        
+    </style>
+
+    <!------------------------------Área de JS------------------------------------------------------------------->
+
+   <script>
+    function carregar(){
+        let data=new Date()
+        let hora=data.getHours() 
+        let minutos=data.getMinutes()
+        let msg=document.getElementById('msg')
+        let foto=document.getElementById('foto')
+        let nome= prompt('Por favor, digite o seu nome!')
+        msg.innerHTML=`Olá ${nome}, agora são ${hora} horas e ${minutos} minutos. `
+        if(hora>0 && hora<=12){
+            document.body.style.background='#ADD8E6'
+            foto.src='foto-manhã.jpg'
+        }else if(hora>12 && hora<=18){
+            document.body.style.background='#FF4500'
+            foto.src='foto-tarde.jpg'
+        }else{
+            document.body.style.background='#515454'
+            foto.src='foto-night.jpg'
+        }
+    }
+    
+   // function clicar(){
+      //  let data= new Date()
+      //  let hora=data.getMinutes()
+     //   let nome=document.getElementById('nome')
+      //  let res=document.getElementById('msg')
+       // res.innerHTML=`Olá ${nome}, agora são ${hora} horas.`
+    
+
+
+   
+
+
+   </script>
+
+<!------------------------------Área de HTML------------------------------------------------------------------->
+
+    
+<body onload="carregar()"> 
+
+
+<header>
+    <div>
+    <h1>
+        Hora do Dia
+    </h1>
+    </div>
+</header>
+
+<section id="container">
+    <div>
+        <h3 id="msg">
+            Mensagem...
+        </h3>
+        </div>
+    <!----  <form>
+           <p>Digite seu nome: </p> <input type="text" name="nome" id="nome">
+           <input type="button" value="Enviar" onclick="clicar()">
+        </form-->
+    </div>
+    <div id="caixa">
+       <img src="foto-manhã.jpg" alt="" style="border-radius: 59px;" id="foto">    
+    </div>
+    <div>
+       
+    </div>
+      
+</section>
+
+    <footer>
+        <div>
+            <p>
+                &copy;CursoEmVideo
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>

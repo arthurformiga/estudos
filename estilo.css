@@ -1,0 +1,23 @@
+.cabecalho{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: stretch;
+    padding: 18px;
+    border-bottom: 1px solid rgb(56, 38, 38);
+}
+
+body{
+ background: linear-gradient(68.15deg, rgb(179, 3, 3 )25.62%, rgb(24, 24, 24 )85.61% );   
+}
+
+.menu{
+    margin: 12px;
+    text-decoration: none;
+    color:white;
+   
+}
+#caixa{
+    margin: 25px;
+    
+}
